@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Methods</title>
+    <!--BSP_3 CSS Links-->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    
+    <!--BSP_4 CSS Links-->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    
+    <!--BSP_5 CSS Links-->
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!--stylesheet-->
+    <link rel="stylesheet" href="style.css">
+    <!--icon Links-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    
+</head>
+<body>
+
+    <div class="container py-5 my-5 bg-info ">
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                <div class="form text-center">
+<h1 class="display-2 fw-bold">String Methods</h1>
+<!--string property part-1-->
+<h2 class="fw-bold mt-5">String Property Methods</h2>
+<div class="text mt-5 border p-5 bg-primary">
+<!--first string-->
+    <div class="row">
+        <label class="col-sm-4 label">Enter the First String&nbsp;&nbsp;&nbsp;&nbsp; :</label>
+        <div class="col-sm-8">
+<input type="text" class="form-control text-center" id="num1"
+placeholder="Enter the string">
+</div>
+    </div>
+<!--result of string-->
+<div class="row mt-5">
+        <label class="col-sm-4 label mt3">Result &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   :</label>
+        <div class="col-sm-8">
+<input type="text" class="form-control text-center mt-3" id="demo"
+disabled>
+</div>
+   
+<!--buttons & dropdowns-->
+<div class="dropdown mt-5">
+    <div class="row mt-5">
+        <div class="col-md-6">
+            <a class="btn btn-success dropdown-toggle text-center" 
+            data-toggle="dropdown" href="#">Option</a>
+<ul class="dropdown-menu bg-info">
+<li><a class="dropdown-item" onclick="length()" href="#">
+    Length</a></li>
+<li><a class="dropdown-item" onclick="toUpperCase()" href="#">
+        Upper</a></li>
+<li><a class="dropdown-item" onclick="toLowerCase()" href="#">
+        Lower</a></li>
+        <li><a class="dropdown-item" onclick="trim()" href="#">
+            Trim</a></li>
+            <li><a class="dropdown-item" onclick="trimStart()" href="#">
+           TrimStart</a></li>
+          <li><a class="dropdown-item" onclick="trimEnd()" href="#">
+ trimEnd</a></li>
+ <li><a class="dropdown-item" onclick="split()" href="#">
+    Split</a></li>
+
+</ul>
+</div>
+<div class="col-md-6">
+    <a class="btn btn-danger text-center"id="res" onclick="reset()">clear</a>  
+  </div>
+
+    </div>
+</div>
+
+</div>
+</div>
+<!--string property Methods part-2-->
+<h2 class="fw-bold mt-5">String Methods</h2>
+<div class="text mt-5 border p-5 bg-primary">
+<!--first string-->
+    <div class="row">
+        <label class="col-sm-4 label">Enter the First String&nbsp;&nbsp;&nbsp;&nbsp; :</label>
+        <div class="col-sm-8">
+<input type="text" class="form-control text-center" id="num2"
+placeholder="Enter the string">
+</div>
+    </div>
+    <!--second string-->
+    <div class="row">
+        <label class="col-sm-4 label mt-5">Enter the  String&nbsp;&nbsp;&nbsp;&nbsp; :</label>
+        <div class="col-sm-8">
+<input type="text" class="form-control text-center mt-5" id="num3"
+placeholder="Enter the string">
+</div>
+    </div>
+<!--result of string-->
+<div class="row mt-5">
+        <label class="col-sm-4 label mt3">Result &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   :</label>
+        <div class="col-sm-8">
+<input type="text" class="form-control text-center mt-3" id="demo1"
+disabled>
+</div>
+
+   
+<!--buttons & dropdowns-->
+<div class="dropdown mt-5">
+    <div class="row mt-5">
+        <div class="col-md-6">
+            <a class="btn btn-success dropdown-toggle text-center" 
+            data-toggle="dropdown" href="#">Option</a>
+<ul class="dropdown-menu bg-info mt-2">
+<li><a class="dropdown-item" onclick="concat()" href="#">
+    Concat</a></li>
+ <li><a class="dropdown-item" onclick="charAt()" href="#">
+ charAt</a></li>
+ <li><a class="dropdown-item" onclick="charCodeAt()" href="#">
+  charCodeAt</a></li>
+  
+</ul>
+</div>
+<div class="col-md-6">
+    <a class="btn btn-danger text-center"id="res" onclick="reset()">clear</a>  
+  </div>
+
+    </div>
+</div>
+
+</div>
+</div>
+
+<!--string property Methods part-3-->
+<h2 class="fw-bold mt-5">String Property Methods</h2>
+<div class="text mt-5 border p-5 bg-primary">
+<!--first string-->
+    <div class="row">
+        <label class="col-sm-2 label">Enter the First String&nbsp;&nbsp;&nbsp;&nbsp; :</label>
+        <div class="col-sm-10">
+<input type="text" class="form-control text-center" id="num4"
+placeholder="Enter the string">
+</div>
+    </div>
+    <div class="row mt-5 justify-content-center ">
+       <label  class="col-md-4 l1 mt-4">Text&nbsp;-&nbsp;1 :</label>
+       <input type="number" class="col-md-4 input mt-3" id="n1"
+       placeholder="Enter the text" >
+
+       <label  class="col-md-4 l1 mt-4">Text&nbsp;-&nbsp;2 :</label>
+       <input type="number"class="col-md-4 input mt-3" id="n2"
+       placeholder="Enter the text" >
+    </div>
+<!--result of string-->
+<div class="row mt-5">
+        <label class="col-sm-2 label mt-3">Result &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   :</label>
+        <div class="col-sm-10">
+<input type="text" class="form-control text-center mt-3" id="demo2"
+disabled>
+</div>
+   
+<!--buttons & dropdowns-->
+<div class="dropdown mt-5">
+    <div class="row mt-5">
+        <div class="col-md-6">
+            <a class="btn btn-success dropdown-toggle text-center" 
+            data-toggle="dropdown" href="#">Option</a>
+<ul class="dropdown-menu bg-info">
+<li><a class="dropdown-item" onclick="slice()" href="#">
+    Slice</a></li>
+<li><a class="dropdown-item" onclick="substring()" href="#">
+        SubString</a></li>
+<li><a class="dropdown-item" onclick="substr()" href="#">
+        SubStr</a></li>
+
+ </ul>
+</div>
+<div class="col-md-6">
+    <a class="btn btn-danger  text-center"id="res" onclick="reset()">clear</a>  
+  </div>
+
+    </div>
+</div>
+
+</div>
+</div>
+
+
+<!--string property Methods part-4-->
+<h2 class="fw-bold mt-5">String Property Methods</h2>
+<div class="text mt-5 border p-5 bg-primary">
+<!--first string-->
+    <div class="row">
+        <label class="col-sm-2 label">Enter the First String&nbsp;&nbsp;&nbsp;&nbsp; :</label>
+        <div class="col-sm-10">
+<input type="text" class="form-control text-center" id="num5"
+placeholder="Enter the string">
+</div>
+    </div>
+    <div class="row mt-5 justify-content-center ">
+       <label  class="col-md-4 l1 mt-4">Text&nbsp;-&nbsp;1 :</label>
+       <input type="text" class="col-md-4 input mt-3" id="a1"
+       placeholder="Enter the text" >
+
+       <label  class="col-md-4 l1 mt-4">Text&nbsp;-&nbsp;2 :</label>
+       <input type="text"class="col-md-4 input mt-3" id="a2"
+       placeholder="Enter the text" >
+    </div>
+<!--result of string-->
+<div class="row mt-5">
+        <label class="col-sm-2 label mt-3">Result &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   :</label>
+        <div class="col-sm-10">
+<input type="text" class="form-control text-center mt-3" id="demo3"
+disabled>
+</div>
+   
+<!--buttons & dropdowns-->
+<div class="dropdown mt-5">
+    <div class="row mt-5">
+        <div class="col-md-6">
+            <a class="btn btn-success dropdown-toggle text-center" 
+            data-toggle="dropdown" href="#">Option</a>
+<ul class="dropdown-menu bg-info ">
+<li><a class="dropdown-item" onclick="replace()" href="#">
+    Replace</a></li>
+<li><a class="dropdown-item" onclick="replaceAll()" href="#">
+        ReplaceAll</a></li>
+<li><a class="dropdown-item" onclick="padStart()" href="#">
+        PadStart</a></li>
+<li><a class="dropdown-item" onclick="padEnd()" href="#">
+ PadEnd</a></li>
+ </ul>
+</div>
+<div class="col-md-6">
+    <a class="btn btn-danger  text-center"id="res" onclick="reset()">clear</a>  
+  </div>
+
+    </div>
+</div>
+
+</div>
+</div>
+
+
+<!--string property part-4-->
+<h2 class="fw-bold mt-5">String Search Property</h2>
+<div class="text mt-5 border p-5 bg-primary">
+<!--first string-->
+    <div class="row">
+        <label class="col-sm-4 label">Enter the First String&nbsp;&nbsp;&nbsp;&nbsp; :</label>
+        <div class="col-sm-8">
+<input type="text" class="form-control text-center" id="num6"
+placeholder="Enter the string">
+</div>
+    </div>
+    <!--second string-->
+    <div class="row">
+        <label class="col-sm-4 label mt-5">Enter the  String&nbsp;&nbsp;&nbsp;&nbsp; :</label>
+        <div class="col-sm-8">
+<input type="text" class="form-control text-center mt-5" id="num7"
+placeholder="Enter the string">
+</div>
+    </div>
+<!--result of string-->
+<div class="row mt-5">
+        <label class="col-sm-4 label mt-3">Result &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   :</label>
+        <div class="col-sm-8">
+<input type="text" class="form-control text-center mt-3" id="demo4"
+disabled>
+</div>
+   
+<!--buttons & dropdowns-->
+<div class="dropdown mt-5">
+    <div class="row mt-5">
+        <div class="col-md-6">
+            <a class="btn btn-success dropdown-toggle text-center" 
+            data-toggle="dropdown" href="#">Option</a>
+<ul class="dropdown-menu bg-info mt-2">
+
+<li><a class="dropdown-item" onclick="match()" href="#">
+        Match</a></li>
+<li><a class="dropdown-item" onclick="matchAll()" href="#">
+        MatchAll</a></li>
+        <li><a class="dropdown-item" onclick="includes()" href="#">
+ Includes</a></li>
+ <li><a class="dropdown-item" onclick="search()" href="#">
+    Search</a></li>
+    <li><a class="dropdown-item" onclick="startsWith()" href="#">
+    StartsWith</a></li>
+    <li><a class="dropdown-item" onclick="endsWith()" href="#">
+EndsWith</a></li>
+<li><a class="dropdown-item" onclick="indexOf()" href="#">
+    IndexOf</a></li>
+    <li><a class="dropdown-item" onclick="lastIndexOf()" href="#">
+        LastIndexOf</a></li>
+  </ul>
+</div>
+<div class="col-md-6">
+    <a class="btn btn-danger text-center"id="res" onclick="reset()">clear</a>  
+  </div>
+
+    </div>
+</div>
+
+</div>
+</div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!--js link-->
+ <script src="script.js"></script>
+
+
+ <!--BSP_3 Js Script Links-->
+     <!-- Latest compiled and minified JavaScript -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+ 
+     <!--BSP_4 Js Script Links-->
+     <!-- jQuery library -->
+     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
+     <!-- Popper JS -->
+     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+     <!-- Latest compiled JavaScript -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+     
+     <!--BSP_5 Js Script Links-->
+     <!-- Latest compiled JavaScript -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
